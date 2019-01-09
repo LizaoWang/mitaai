@@ -9,10 +9,10 @@
 .slide {
     transform: translateX(-100%);
     @include media($medium) {
-      transform: translateX(em(-600));
+      transform: translateX(em(-$menu-size-medium));
     }
     @include media($large) {
-      transform: translateX(em(-900));
+      transform: translateX(em(-$menu-size-large));
     }
   }
 
@@ -36,18 +36,15 @@
   cursor: pointer;
   z-index: 20;
   box-sizing: border-box;
-  &:hover {
-    background: $black;
-  }
   transition: $sliding-menu-animation;
   &.slide {
-    background: $danger-color;
+    background: $aai-yellow;
     transform: translateX(0); /* don't slide close button on small screens only */
     @include media($medium) {
-      transform: translateX(em(-600)); /* reset slide position */
+      transform: translateX(em(-$menu-size-medium)); /* reset slide position */
     }
     @include media($large) {
-      transform: translateX(em(-900)); /* reset slide position */
+      transform: translateX(em(-$menu-size-large)); /* reset slide position */
     }
   }
 }
@@ -66,10 +63,10 @@
   text-align: left;
   @include size(100% 100%);
   @include media($small) {
-    width: em(600);
+    width: em($menu-size-medium);
   }
   @include media($large) {
-    width: em(900);
+    width: em($menu-size-large);
   }
   transform: translateX(100%);
   transition: $sliding-menu-animation;

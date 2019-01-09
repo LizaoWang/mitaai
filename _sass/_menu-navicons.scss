@@ -8,6 +8,7 @@
 @mixin line {
   display: inline-block;
   width: $button-size;
+  top:-$button-size/14;
   height: $button-size/7;
   background: $white;
   transition: $transition;
@@ -24,14 +25,14 @@
       transform-origin: $button-size/14 center;
   }
   &:before {
-    top: $button-size/4;
+    top: $button-size/3;
   }
   &:after {
-    top: -$button-size/4;
+    top: -$button-size/3;
   }
 }
 
-.lines-button:hover {
+/*.lines-button:hover {
   .nav-lines {
     &:before {
       top: $button-size/3.5;
@@ -40,7 +41,7 @@
       top: -$button-size/3.5;
     }
   }
-}
+}*/
 
 /* For both the arrow up and left icons */
 

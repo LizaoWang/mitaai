@@ -39,6 +39,7 @@ $success-color               	: #2ecc71;
 $warning-color               	: #f1c40f;
 $danger-color                	: #e74c3c;
 $info-color                  	: #3498db;
+$aai-yellow                   : #f5c83a;
 
 $table-border-color          	: $border-color;
 $table-border                	: 1px solid $table-border-color;
@@ -87,8 +88,10 @@ $sliding-menu-background-hover : $black;
 $sliding-menu-color-hover	 	   : $white;
 $sliding-menu-border   			   : 1px solid $sliding-menu-border-color;
 $button-size		         	     : 30px;
-$transition						         : 0.3s; // increase this to see the transformations in slow-motion
-$sliding-menu-animation        : all 500ms cubic-bezier(.86,.01,.77,.78);
+$transition						         : 0.1s; // increase this to see the transformations in slow-motion
+$sliding-menu-animation        : all 500ms cubic-bezier(0,0,.58,1);
+$menu-size-medium              : 300;
+$menu-size-large               : 450;
 
 /*
    Badge variables
