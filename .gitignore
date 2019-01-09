@@ -40,3 +40,7 @@ Thumbs.db
 ##########################
 _site
 .sass_cache/
+.sass_cache
+/.sass_cache
+/.sass_cache/*
+.sass_cache/*
