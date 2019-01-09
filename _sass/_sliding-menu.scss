@@ -24,7 +24,16 @@
   position: fixed;
   transform: translateZ(0);
   backface-visibility: hidden; /* fix scroll jank */
-  top: $gutter;
+  top: $gutter+4;
+  @include media($small){
+    top: $gutter;
+  }
+  @include media($medium){
+    top: $gutter;
+  }
+  @include media($large){
+    top: $gutter;
+  }
   right: $gutter;
   display: block;
   width: $button-size * 2;
@@ -39,12 +48,19 @@
   transition: $sliding-menu-animation;
   &.slide {
     background: $aai-yellow;
-    transform: translateX(0); /* don't slide close button on small screens only */
+    transform: translateX(0) /* don't slide close button horiz on small screens only */
+    translateY(-4em); /* slide close button UP on small screens */
+    @include media($small) {
+      transform: translateX(em(-$menu-size-medium)) /* reset horiz slide position */
+      translateY(0);
+    }
     @include media($medium) {
-      transform: translateX(em(-$menu-size-medium)); /* reset slide position */
+      transform: translateX(em(-$menu-size-medium)) /* reset horiz slide position */
+        translateY(0); /* don't slide close button up */
     }
     @include media($large) {
-      transform: translateX(em(-$menu-size-large)); /* reset slide position */
+      transform: translateX(em(-$menu-size-large)) /* reset horiz slide position */
+        translateY(0);  /* don't slide close button up */
     }
   }
 }

@@ -35,12 +35,36 @@
 		height: $masthead-height;
 		float:left;
 		padding-right:20px;
+		margin-bottom:20px; // Margin on on small screens
+
+		// Margin on big screens
+		@include media($small){
+			margin-bottom:0;
+		}
+		@include media($medium){
+			margin-bottom:0;
+		}
+		@include media($large){
+			margin-bottom:0;
+		}
 	}
 	span {
 		display:block;
-		padding: (.25 * $masthead-height) 0; // fourth the height to center vertically
 		line-height: .5 * $masthead-height; // half the height to center vertically
 
+		// No padding on small screens
+		padding: 0;
+
+		// Big screens
+		@include media($small){
+				padding: (.25 * $masthead-height) 0; // fourth the height to center vertically
+		}
+		@include media($medium){
+			padding: (.25 * $masthead-height) 0; // fourth the height to center vertically
+		}
+		@include media($large){
+			padding: (.25 * $masthead-height) 0; // fourth the height to center vertically
+		}
 	}
 }
 
@@ -97,7 +121,7 @@
 	display: none;
 	position: relative;
 	@include media($medium) {
-		@include span-columns(12);
+		//@include span-columns(12);
 	}
 	@include media($large) {
 		@include span-columns(7);
