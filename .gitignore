@@ -39,8 +39,8 @@ Thumbs.db
 # Jekyll generated files #
 ##########################
 _site
-.sass_cache/
-.sass_cache
-/.sass_cache
-/.sass_cache/*
-.sass_cache/*
+.sass-cache/
+.sass-cache
+/.sass-cache
+/.sass-cache/*
+.sass-cache/*
