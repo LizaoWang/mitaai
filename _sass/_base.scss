@@ -23,10 +23,13 @@ li {
 /* Headings */
 
 h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	//font-style: italic;
 	font-family: $heading-font;
 	text-rendering: optimizeLegibility; // Fix the character spacing for headings
 }
 h1 {
+
 	@include font-size(32);
 }
 h2 {

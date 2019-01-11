@@ -7,3 +7,6 @@
 - title: about
   url: /about
   image: 300x200.png
+
+# Currently, the layout supports up to 5 links in the top menu.
+# The sliding menu is theoretically unlimited.
