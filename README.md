@@ -24,3 +24,7 @@ bundle exec jekyll serve
 ```
 
 For more information, check the [Skinny Bones Jekyll documentation](https://mmistakes.github.io/skinny-bones-jekyll/getting-started/).
+
+If you wish to write posts, we have installed [jekyll-compose](https://github.com/jekyll/jekyll-compose).
+
+Once you have finished making changes, `git add`, `git commit`, and `git push` as usual.
