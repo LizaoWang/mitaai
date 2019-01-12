@@ -160,6 +160,8 @@
 	a {
 		color: lighten($black,60);
 	}
+
+		display:none; // Taking out the bottom menu for now.
 }
 
 
@@ -375,7 +377,21 @@
    ========================================================================== */
 
 #site-footer {
-	@include outer-container;
+	// Stuff from _outer-container.scss but without clearfix:
+	max-width: $max-width;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+
+	// Flexbox stuff to get the logo looking right:
+  display: flex;
+	flex-flow: row nowrap;
+  align-items: flex-end;
+	justify-content: space-between;
+
+
+	// Original footer code:
 	margin-top: (3 * (0px + $doc-line-height));
 	margin-top: (3 * (0rem + ($doc-line-height / $doc-font-size)));
 	padding-bottom: $gutter;
@@ -388,5 +404,7 @@
 			color: lighten($black,60);
 			text-decoration: none;
 		}
+		align-self:flex-end;
+		margin-bottom:0;
 	}
 }

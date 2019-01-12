@@ -51,7 +51,7 @@
   &.slide {
     background: $aai-yellow;
     transform: translateX(0) /* don't slide close button horiz on small screens only */
-    translateY(-4em); /* slide close button UP on small screens */
+    translateY(0); /* slide close button UP on small screens */
     @include media($small) {
       transform: translateX(em(-$menu-size-medium)) /* reset horiz slide position */
       translateY(0);
