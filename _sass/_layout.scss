@@ -1,10 +1,10 @@
 /* ==========================================================================
-   Page layout
-   ========================================================================== */
+Page layout
+========================================================================== */
 
 /*
-   Masthead
-   ========================================================================== */
+Masthead
+========================================================================== */
 
 #masthead {
 	padding: $gutter;
@@ -60,7 +60,7 @@
 
 		// Big screens
 		@include media($small){
-				padding: (.25 * $masthead-height) 0; // fourth the height to center vertically
+			padding: (.25 * $masthead-height) 0; // fourth the height to center vertically
 		}
 		@include media($medium){
 			padding: (.25 * $masthead-height) 0; // fourth the height to center vertically
@@ -73,8 +73,8 @@
 
 
 /*
-   Menus
-   ========================================================================== */
+Menus
+========================================================================== */
 
 .menu {
 	li {
@@ -161,13 +161,13 @@
 		color: lighten($black,60);
 	}
 
-		display:none; // Taking out the bottom menu for now.
+	display:none; // Taking out the bottom menu for now.
 }
 
 
 /*
-   Page wrapper
-   ========================================================================== */
+Page wrapper
+========================================================================== */
 
 #page-wrapper {
 	padding: 0 $gutter; // add white space for smaller screens
@@ -182,8 +182,8 @@
 }
 
 /*
-   Main content
-   ========================================================================== */
+Main content
+========================================================================== */
 
 #main {
 	.inner-wrap {
@@ -215,9 +215,9 @@
 			p > a.reversefootnote {
 				border-bottom-width: 0;
 			}
-      .toc li > a {
-        border-bottom-width: 0;
-      }
+			.toc li > a {
+				border-bottom-width: 0;
+			}
 			.page-footer,
 			.pagination {
 				@include fill-parent;
@@ -240,7 +240,7 @@
 			}
 		}
 	}
-  /* advertisements */
+	/* advertisements */
 	.ads {
 		position: relative;
 		text-align: center;
@@ -341,8 +341,8 @@
 }
 
 /*
-   Page footer
-   ========================================================================== */
+Page footer
+========================================================================== */
 
 .page-footer {
 	position: relative;
@@ -373,21 +373,21 @@
 }
 
 /*
-   Site footer
-   ========================================================================== */
+Site footer
+========================================================================== */
 
 #site-footer {
 	// Stuff from _outer-container.scss but without clearfix:
 	max-width: $max-width;
-  margin: {
-    left: auto;
-    right: auto;
-  }
+	margin: {
+		left: auto;
+		right: auto;
+	}
 
 	// Flexbox stuff to get the logo looking right:
-  display: flex;
+	display: flex;
 	flex-flow: row nowrap;
-  align-items: flex-end;
+	align-items: flex-end;
 	justify-content: space-between;
 
 
@@ -396,7 +396,7 @@
 	margin-top: (3 * (0rem + ($doc-line-height / $doc-font-size)));
 	padding-bottom: $gutter;
 	font-family: $alt-font;
-  /* Copyright text */
+	/* Copyright text */
 	.copyright {
 		@include font-size(12);
 		color: lighten($black,60);
@@ -407,4 +407,21 @@
 		align-self:flex-end;
 		margin-bottom:0;
 	}
+}
+
+/*
+AAI animation
+========================================================================== */
+
+#aai-p5 {
+	margin: 0;
+  display: flex;
+
+  /* This centers our sketch horizontally. */
+  justify-content: center;
+
+  /* This centers our sketch vertically. */
+  align-items: center;
+	margin-top:-$gutter;
+	padding-bottom:$gutter;
 }
