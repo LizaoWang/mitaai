@@ -1,12 +1,22 @@
 # Site navigation links
 
-- title: home
-  url: /
+- title: Research
+  url: /research
   image: 300x200.png
 
-- title: about
+- title: Projects
+  url: /projects
+  image: 300x200.png
+
+- title: News
+  url: /news
+  image: 300x200.png
+
+- title: About
   url: /about
   image: 300x200.png
+
+
 
 # Currently, the layout supports up to 5 links in the top menu.
 # The sliding menu is theoretically unlimited.
