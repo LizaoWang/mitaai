@@ -6,8 +6,23 @@ permalink: /
 <div class="row">
 	<div class="left">
 		
-		<img src="../images/aai-header.jpg" alt="teaser" itemprop="image" style="width: 100%;">
-		<p>Active Archives Initiative：Advancing Digital archives as platforms for creative engagement.</p>
+		
+    
+
+    {% for post in site.categories.Introduction limit:1%}
+  <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" class="post-teaser">
+    {% if post.image.teaser %}
+    <img src="{{ site.url }}/images/{{ post.image.teaser }}" alt="logo" itemprop="image" style="margin-bottom: 10px;">
+    {% else %}
+    <img src="{{ site.url }}/images/{{ site.teaser }}" alt="logo" itemprop="image">{% endif %}
+  </a>
+  <h2 class="post-title" itemprop="name">
+    <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+  </h2>
+  <p class="post-excerpt" itemprop="description">{{ post.excerpt | strip_html | truncate: 50 }}</p>
+   {% endfor %}
+
+
 	</div><!--left-->
 	<div class="right">
 		<p class="subtitle">News</p>
@@ -46,13 +61,15 @@ permalink: /
 <!--page lower half-->
 <div class="row">
 	<div class="left66">
-<div>
+		<div class="left50">
+		{% include research-grid.html %}
+		</div>
+		<div class="right50">
+		{% include projects-grid.html %}
+		</div>
+	</div>
 
-{% for post in site.posts %}
-	{% include post-grid.html %}
-{% endfor %}
-</div><!-- /.tiles -->
-</div><!--left-->
+
 
 <!--subscription and contact column-->
 <div class="right33">
@@ -86,6 +103,7 @@ permalink: /
 
 
 
+
 <style>
 .branding{
 	padding-bottom: 5px;
@@ -106,13 +124,20 @@ permalink: /
 .right {
 	margin-left: 4%;
 	display: inline-block;
-	width: 45%;	
+	width: 48%;	
 }
 
 .left66 {
 	float: left;
 	display: inline-block;
 	width: 66%
+	
+}
+
+.left33 {
+	float: left;
+	display: inline-block;
+	width: 33%
 	
 }
 
@@ -125,14 +150,14 @@ permalink: /
 .left50{
 	float: left;
 	display: inline-block;
-	width: 50%
+	width: 48%
 
 }
 
 .right50{
-	float: left;
+	margin-left: 4%;
 	display: inline-block;
-	width: 50%
+	width: 48%
 
 }
 
@@ -153,6 +178,8 @@ permalink: /
 .subtitle {
 	padding:0 0 0 0;
 	margin: -3px 0 0 0;
+	font-weight: bold;
+	font-family: sans-serif;
 }
 
 #subscribe{

@@ -1,8 +1,5 @@
 ---
-layout: page
-title: About the Active Archives Initiative
+layout: projects
+title: Projects
 ---
 
-Where the project content goes
-
-### project content will go here
